@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DomainEvents\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Shared\" />
+    <Folder Include="ValueObjects\" />
+  </ItemGroup>
+
 </Project>
