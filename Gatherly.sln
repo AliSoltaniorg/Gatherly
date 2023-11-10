@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A753C6B6-A6BF-4836-9D0D-2D2FAF987302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Application", "src\Gatherly.Application\Gatherly.Application.csproj", "{0C757FFA-B72E-479B-88E0-3CB4F1F632E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Domain", "src\Gatherly.Domain\Gatherly.Domain.csproj", "{ABC539AF-9E61-4001-84BB-56A788BD4A7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +16,19 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C757FFA-B72E-479B-88E0-3CB4F1F632E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C757FFA-B72E-479B-88E0-3CB4F1F632E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C757FFA-B72E-479B-88E0-3CB4F1F632E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C757FFA-B72E-479B-88E0-3CB4F1F632E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC539AF-9E61-4001-84BB-56A788BD4A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC539AF-9E61-4001-84BB-56A788BD4A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC539AF-9E61-4001-84BB-56A788BD4A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC539AF-9E61-4001-84BB-56A788BD4A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C757FFA-B72E-479B-88E0-3CB4F1F632E7} = {A753C6B6-A6BF-4836-9D0D-2D2FAF987302}
+		{ABC539AF-9E61-4001-84BB-56A788BD4A7B} = {A753C6B6-A6BF-4836-9D0D-2D2FAF987302}
 	EndGlobalSection
 EndGlobal
