@@ -21,7 +21,6 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
         _gatheringRepositoryMock.Object,
         _unitOfWorkMock.Object
       );
-
     }
 
     [Fact]
