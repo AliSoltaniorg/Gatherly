@@ -390,3 +390,6 @@ FodyWeavers.xsd
 /src/Gatherly.Application/obj/Debug/net7.0/Gatherly.Application.csproj.AssemblyReference.cache
 /src/Gatherly.Application/obj/Debug/net7.0/Gatherly.Application.GeneratedMSBuildEditorConfig.editorconfig
 /src/Gatherly.Application/obj/Debug/net7.0/Gatherly.Application.GlobalUsings.g.cs
+*.lutconfig
+/.gitignore
+/.gitignore

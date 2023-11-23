@@ -1,5 +1,4 @@
 ﻿using Gatherly.Domain.Enumerations;
-using Gatherly.Domain.Repositories;
 
 namespace Gatherly.Domain.Entities
 {
@@ -59,12 +58,12 @@ namespace Gatherly.Domain.Entities
       {
         case GatheringType.WithFixedNumberOfAttendees:
           if (!maximumNumberOfAttendees.HasValue)
-            throw new Exception($"{nameof(maximumNumberOfAttendees)} can't be null.");
+            throw new Exception($"{nameof(MaximumNumberOfAttendees)} can't be null.");
           gathering.MaximumNumberOfAttendees = maximumNumberOfAttendees;
           break;
         case GatheringType.WithExpirationForInvitations:
           if (!invitationsValidBeforeInHours.HasValue)
-            throw new Exception($"{nameof(invitationsValidBeforeInHours)} can't be null.");
+            throw new Exception($"{nameof(InvitationsExpireAt)} can't be null.");
           gathering.InvitationsExpireAt = gathering.ScheduledAt.AddHours(-invitationsValidBeforeInHours.Value);
           break;
         default:

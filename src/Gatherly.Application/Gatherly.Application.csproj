@@ -1,6 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+	<InternalsVisibleTo Include="Gatherly.Application.Tests.Unit" />
     <ProjectReference Include="..\Gatherly.Domain\Gatherly.Domain.csproj" />
     <ProjectReference Include="..\Gatherly.Infrastructure\Gatherly.Infrastructure.csproj" />
   </ItemGroup>
