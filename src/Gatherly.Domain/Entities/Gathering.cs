@@ -1,8 +1,9 @@
 ﻿using Gatherly.Domain.Enumerations;
+using Gatherly.Domain.Primitives;
 
 namespace Gatherly.Domain.Entities
 {
-  public class Gathering
+  public sealed class Gathering : Entity<Guid>
   {
     private Gathering(
       Guid id,
@@ -11,9 +12,8 @@ namespace Gatherly.Domain.Entities
       DateTime scheduledAt,
       string name,
       string? location
-    )
+    ):base(id)
     {
-      Id = id;
       Creator = creator;
       Type = type;
       ScheduledAt = scheduledAt;
@@ -21,7 +21,6 @@ namespace Gatherly.Domain.Entities
       Location = location;
     }
 
-    public Guid Id { get; private set; }
     public Member? Creator { get; private set; }
     public GatheringType Type { get; private set; }
     public DateTime ScheduledAt { get; private set; }

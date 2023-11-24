@@ -21,7 +21,6 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
         _gatheringRepositoryMock.Object,
         _unitOfWorkMock.Object
       );
-
     }
 
     [Fact]
@@ -65,10 +64,7 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
         );
 
       _memberRepositoryMock.Setup(ex => ex.GetByIdAsync(It.IsAny<Guid>(), default))
-        .ReturnsAsync(new Member()
-        {
-
-        });
+        .ReturnsAsync(new Member(Guid.NewGuid(), "", "", ""));
 
       //act
       Task result = _gatheringCommandHandler.Handle(gatheringCommand, default);
@@ -76,7 +72,7 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
       //assert
       var exception = await Assert.ThrowsAsync<Exception>(async () => await result);
       Assert.Contains(nameof(Gathering.InvitationsExpireAt), exception.Message);
-    } 
+    }
     [Fact]
     public async Task ShouldThrowExceptionWhenGatheringTypeIsWithFixedNumberOfAttendeesAndMaximumNumberOfAttendeesIsNull()
     {
@@ -93,10 +89,7 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
         );
 
       _memberRepositoryMock.Setup(ex => ex.GetByIdAsync(It.IsAny<Guid>(), default))
-        .ReturnsAsync(new Member()
-        {
-
-        });
+        .ReturnsAsync(new Member(Guid.NewGuid(), "", "", ""));
 
       //act
       Task result = _gatheringCommandHandler.Handle(gatheringCommand, default);
@@ -121,7 +114,8 @@ namespace Gatherly.Application.Tests.Unit.Gatherings
           3
         );
 
-      _memberRepositoryMock.Setup(ex => ex.GetByIdAsync(It.IsAny<Guid>(), default)).ReturnsAsync(new Member { });
+      _memberRepositoryMock.Setup(ex => ex.GetByIdAsync(It.IsAny<Guid>(), default))
+        .ReturnsAsync(new Member(Guid.NewGuid(), "", "", ""));
 
       //act
       await _gatheringCommandHandler.Handle(gatheringCommand, default);
