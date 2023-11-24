@@ -40,7 +40,7 @@ namespace Gatherly.Application.Invitations.Commands.AcceptInvitation
       if (invitation is null || !invitation.IsPending())
         return Unit.Value;
 
-      Member member = await _memberRepository.GetByIdAsync(invitation.MemberId, cancellationToken);
+      Member? member = await _memberRepository.GetByIdAsync(invitation.MemberId, cancellationToken);
 
       Gathering gathering = await _gatheringRepository
         .GetByIdWithCreatorAsync(invitation.GatheringId, cancellationToken);
