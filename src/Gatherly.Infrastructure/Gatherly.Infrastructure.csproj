@@ -15,4 +15,8 @@
     <Folder Include="Services\Messaging\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Gatherly.Domain\Gatherly.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
