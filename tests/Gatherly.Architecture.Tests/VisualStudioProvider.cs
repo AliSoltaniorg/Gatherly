@@ -1,6 +1,5 @@
 ﻿using System.Xml.Linq;
 
-
 namespace Gatherly.Architecture.Tests
 {
   public static class VisualStudioProvider

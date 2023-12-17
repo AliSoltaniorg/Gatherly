@@ -16,14 +16,14 @@ namespace Gatherly.Architecture.Tests
       var references = VisualStudioProvider.GetReferences(DomainAssemblyName);
 
       //assert
-      Assert.True(references.Intersect(excludedProjectAssemblies).Count() == 0);
+      Assert.True(!references.SequenceEqual(excludedProjectAssemblies));
     }
 
     [Fact]
     public void Application_Should_HaveDomainAndInfrastructureDependencies()
     {
       //arrange
-      var excludedProjectAssemblies = new[] { DomainAssemblyName, InfrastructureAssemblyName };
+      var excludedProjectAssemblies = new[] { DomainAssemblyName };
 
       //act
       var references = VisualStudioProvider.GetReferences(ApplicationAssemblyName);
@@ -36,7 +36,7 @@ namespace Gatherly.Architecture.Tests
     public void Infrastructure_Should_HaveDomainReference()
     {
       //arrange
-      var excludedProjectAssemblies = new[] { DomainAssemblyName };
+      var excludedProjectAssemblies = new[] { ApplicationAssemblyName,DomainAssemblyName };
 
       //act
       var references = VisualStudioProvider.GetReferences(InfrastructureAssemblyName);

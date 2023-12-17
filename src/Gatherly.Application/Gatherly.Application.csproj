@@ -4,12 +4,10 @@
 		<InternalsVisibleTo Include="Gatherly.Application.Tests.Unit" />
 		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
 		<ProjectReference Include="..\Gatherly.Domain\Gatherly.Domain.csproj" />
-		<ProjectReference Include="..\Gatherly.Infrastructure\Gatherly.Infrastructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Abstractions\Data\" />
-		<Folder Include="Abstractions\Email\" />
 		<Folder Include="Abstractions\Messaging\" />
 		<Folder Include="Behaviors\" />
 		<Folder Include="Contracts\" />

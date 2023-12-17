@@ -1,4 +1,4 @@
-﻿using Gatherly.Application.Abstractions;
+﻿using Gatherly.Application.Abstractions.Email;
 using Gatherly.Domain.Entities;
 using Gatherly.Domain.Enumerations;
 using Gatherly.Domain.Repositories;
@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Gatherly.Application.Invitations.Commands.AcceptInvitation
 {
-  internal sealed class AcceptInvitationCommandHandler : IRequestHandler<AcceptInvitationCommand, Unit>
+    internal sealed class AcceptInvitationCommandHandler : IRequestHandler<AcceptInvitationCommand, Unit>
   {
     private readonly IMemberRepository _memberRepository;
     private readonly IGatheringRepository _gatheringRepository;

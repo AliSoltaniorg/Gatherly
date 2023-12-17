@@ -1,22 +1,44 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Persistence\Configurations\" />
-    <Folder Include="Persistence\Migrations\" />
-    <Folder Include="Persistence\Repositories\" />
-    <Folder Include="Services\Email\" />
-    <Folder Include="Services\Jobs\" />
-    <Folder Include="Services\Messaging\" />
-  </ItemGroup>
+	<ItemGroup>
+		<COMReference Include="Microsoft.Office.Core">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>8</VersionMinor>
+			<VersionMajor>2</VersionMajor>
+			<Guid>2df8d04c-5bfa-101b-bde5-00aa0044de52</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="Microsoft.Office.Excel.dll">
+			<Guid>00020813-0000-0000-c000-000000000046</Guid>
+			<VersionMajor>1</VersionMajor>
+			<VersionMinor>7</VersionMinor>
+			<WrapperTool>tlbimp</WrapperTool>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+		</COMReference>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Gatherly.Domain\Gatherly.Domain.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Persistence\Configurations\" />
+		<Folder Include="Persistence\Migrations\" />
+		<Folder Include="Persistence\Repositories\" />
+		<Folder Include="Services\Email\" />
+		<Folder Include="Services\Jobs\" />
+		<Folder Include="Services\Messaging\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Gatherly.Infrastructure.Tests.Unit" />
+		<ProjectReference Include="..\Gatherly.Application\Gatherly.Application.csproj" />
+		<ProjectReference Include="..\Gatherly.Domain\Gatherly.Domain.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using Gatherly.Application.Abstractions;
+﻿using Gatherly.Application.Abstractions.Email;
 using Gatherly.Domain.Entities;
 using Gatherly.Domain.Enumerations;
 using Gatherly.Domain.Repositories;

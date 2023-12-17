@@ -1,10 +1,10 @@
-﻿using Gatherly.Application.Abstractions;
+﻿using Gatherly.Application.Abstractions.Email;
 using Gatherly.Application.Invitations.Commands.AcceptInvitation;
 using Gatherly.Domain.Enumerations;
 
 namespace Gatherly.Application.Tests.Unit.Invitations
 {
-  public class AcceptInvitationTests
+    public class AcceptInvitationTests
   {
     private readonly Mock<IMemberRepository> _memberRepositoryMock;
     private readonly Mock<IGatheringRepository> _gatheringRepositoryMock;
